@@ -1,5 +1,7 @@
 package com.wangsan.study.netty;
 
+import java.util.Arrays;
+
 import com.google.common.primitives.Ints;
 import com.wangsan.study.netty.tcperror.TcpSuccessTimeServerHandler;
 
@@ -34,7 +36,9 @@ public class TimeServer {
             ChannelFuture f = b.bind(port).sync();
 
             // 等待服务器监听端口关闭
+            System.err.println("stop before");
             f.channel().closeFuture().sync();
+            System.err.println("stop after");
         } finally {
             // 优雅退出，释放线程池资源
             bossGroup.shutdownGracefully();

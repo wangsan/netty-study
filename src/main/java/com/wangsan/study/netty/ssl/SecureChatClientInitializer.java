@@ -2,9 +2,6 @@ package com.wangsan.study.netty.ssl;
 
 import javax.net.ssl.SSLEngine;
 
-import com.wangsan.study.netty.ssl.SecureChatClientHandler;
-import com.wangsan.study.netty.ssl.SecureChatSslContextFactory;
-
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
